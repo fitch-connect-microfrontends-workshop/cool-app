@@ -26,10 +26,6 @@ export default {
   },
   props: {
     tags: { required: true }
-  },
-  data() {
-    return {};
-  },
-  methods: {}
+  }
 };
 </script>
