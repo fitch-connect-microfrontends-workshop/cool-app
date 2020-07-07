@@ -1,21 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="max-w-sm mx-auto card mt-8">
+      <label class="form-label mb-2">Cool App Tags</label>
+      <inline-tag-input v-model="tags"></inline-tag-input>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import InlineTagInput from "./components/InlineTagInput";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    InlineTagInput
+  },
+  data() {
+    return {
+      tags: ["awesome", "excellent", "amazing"]
+    };
   }
-}
+};
 </script>
 
+<style src="./assets/css/app.css"/>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
